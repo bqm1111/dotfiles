@@ -1,4 +1,9 @@
+call plug#begin()
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+call plug#end()
 " Basic setting
 set nocompatible
 set encoding=utf-8
@@ -61,7 +66,7 @@ map <C-a> ggVG
 " Insert a new line without leaving normal mode
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
-
+map <Leader>g :Goyo
 set path+=**
 " Escape terminal mode in Neovim
 :tnoremap <Esc> <C-\><C-n>
